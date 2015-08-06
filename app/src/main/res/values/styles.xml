@@ -1,0 +1,33 @@
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+    </style>
+
+
+<!-- Style to replace actionbar overflow icon. set item 'android:actionOverflowButtonStyle' in AppTheme -->
+<style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+    <item name="android:src">@drawable/add_form</item>
+    <item name="android:background">?android:attr/actionBarItemBackground</item>
+    <item name="android:contentDescription">"Lala"</item>
+</style> <!-- the theme applied to the application or activity -->
+
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/themegreen</item>
+    </style>
+
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/textfieldback</item>
+    </style>
+
+    <style name="appButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/themegreen</item>
+
+    </style>
+
+
+</resources>

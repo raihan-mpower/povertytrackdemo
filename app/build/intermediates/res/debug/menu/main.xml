@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:tools="http://schemas.android.com/tools
+    
+    <item
+        android:id="@+id/overview"
+        android:title="OVERVIEW"
+        
+        android:showAsAction="collapseActionView"
+        
+    />
+ 
+    <item
+        android:id="@+id/profile"
+        android:title="PROFILE"
+         
+      android:showAsAction="collapseActionView"
+    />
+ 
+    <item
+        android:id="@+id/survey"
+        android:title="SURVEY"
+        
+        android:showAsAction="collapseActionView"
+    />
+ 
+    <item
+        android:id="@+id/transfer"
+        android:title="TRANSFERS"
+        
+        android:showAsAction="collapseActionView"
+    />
+    <item
+        android:id="@+id/follow"
+        android:title="FOLLOW UPS"
+        
+        android:showAsAction="collapseActionView"
+    />
+ 
+    
+</menu><!-- From: file:/home/raihan/OpenSrpWorkspace/progress%20tracker/app/src/main/res/menu/main.xml -->
