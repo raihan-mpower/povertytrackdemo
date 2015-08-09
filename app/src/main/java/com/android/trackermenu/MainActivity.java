@@ -186,7 +186,7 @@ public class MainActivity extends Activity {
 			fragment = new Settings();
 			break;
 		case 2:
-			fragment = new Newfamilies();
+			fragment = new Newfamilies("1");
 			break;
 		case 4:
 			fragment = new Logout();

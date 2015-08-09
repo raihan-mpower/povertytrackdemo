@@ -23,6 +23,9 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.trackermenu.datamodel.family;
+import com.android.trackermenu.repository.RecordRepository;
+
 public class MyFamilies extends Fragment {
 	
 	public MyFamilies(){}
@@ -68,19 +71,23 @@ public class MyFamilies extends Fragment {
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.simple_list_item_1,listContent);
 //
 //
-        UsersAdapter uad = new UsersAdapter(rootView.getContext());
+
+        UsersAdapter uad = new UsersAdapter(rootView.getContext(),new RecordRepository(getActivity()).getallfamilies());
         listView.setAdapter(uad);
 
         uad.notifyDataSetChanged();
         return rootView;
     }
     public class UsersAdapter extends ArrayAdapter {
-        public UsersAdapter(Context context) {
-            super(context, R.layout.item_user);
+        ArrayList <family> families;
+        public UsersAdapter(Context context,ArrayList<family> families) {
+             super(context, R.layout.item_user);
+            this.families = families;
+
         }
         @Override
          public int getCount(){
-            return 5;
+            return families.size() ;
         }
 
         @Override
@@ -98,10 +105,10 @@ public class MyFamilies extends Fragment {
                 }
             });
             // Lookup view for data population
-//            TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
+            TextView hhname = (TextView) convertView.findViewById(R.id.hhname);
 //            TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
 //            // Populate the data into the template view using the data object
-//            tvName.setText(user.name);
+            hhname.setText(families.get(position).getNameHH());
 //            tvHome.setText(user.hometown);
             // Return the completed view to render on screen
             return convertView;

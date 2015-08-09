@@ -30,7 +30,7 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/hhname"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

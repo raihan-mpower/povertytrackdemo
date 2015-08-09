@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class RecordRepository extends SQLiteOpenHelper{
 
-    private String family_sql = "CREATE TABLE family(id INTEGER PRIMARY KEY AUTOINCREMENT, UserID VARCHAR, FamilyID VARCHAR, " +
+    private String family_sql = "CREATE TABLE family(id INTEGER PRIMARY KEY AUTOINCREMENT, UserID VARCHAR, FamilyID INTEGER AUTOINCREMENT , " +
             "NameHH VARCHAR, IDHH VARCHAR, AgeHH VARCHAR, GenderHH VARCHAR, CivilStatus VARCHAR, NumberOfChildren VARCHAR, longitude VARCHAR, lattitude VARCHAR)";
 
     private String familyDetails_sql = "CREATE TABLE familyDetails(id INTEGER PRIMARY KEY AUTOINCREMENT, mealsPerDay VARCHAR, FamilyID VARCHAR, " +
@@ -31,8 +31,8 @@ public class RecordRepository extends SQLiteOpenHelper{
     private String visit_sql = "CREATE TABLE visits(id INTEGER PRIMARY KEY AUTOINCREMENT, FamilyId VARCHAR, type_of_visit VARCHAR,userid VARCHAR,date VARCHAR)";
 
 
-    public RecordRepository(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public RecordRepository(Context context) {
+        super(context, "progresstracker", null,1);
     }
 
     @Override
@@ -50,7 +50,6 @@ public class RecordRepository extends SQLiteOpenHelper{
     public ContentValues createContentValuesForfamily(family Family){
         ContentValues values = new ContentValues();
         values.put("UserID", Family.getUserID());
-        values.put("FamilyID", Family.getFamilyID());
         values.put("NameHH",Family.getNameHH());
         values.put("IDHH", Family.getIDHH());
         values.put("AgeHH", Family.getAgeHH());
@@ -102,6 +101,7 @@ public class RecordRepository extends SQLiteOpenHelper{
         ArrayList<family> families = new ArrayList<family>();
         SQLiteDatabase database = super.getReadableDatabase();
         Cursor cursor = database.query("family", null, null ,null, null, null, null, null);
+        cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             family Family = new family(cursor.getString(1), cursor.getString(2), cursor.getString(3),
                     cursor.getString(4), cursor.getString(5), cursor.getString(6),

@@ -59,24 +59,24 @@ public final class R {
         public static final int transfer3=0x7f020019;
     }
     public static final class id {
-        public static final int ScrollView01=0x7f0a001a;
+        public static final int ScrollView01=0x7f0a0019;
         public static final int TextView01=0x7f0a002f;
         public static final int button=0x7f0a0005;
-        public static final int button1=0x7f0a000b;
         public static final int button2=0x7f0a000c;
-        public static final int button_login=0x7f0a0019;
+        public static final int button_login=0x7f0a0018;
         public static final int calendarView=0x7f0a0006;
         public static final int calendarView2=0x7f0a003f;
+        public static final int children_in_between=0x7f0a0024;
         public static final int drawer_layout=0x7f0a0000;
         public static final int editText=0x7f0a0009;
-        public static final int editText1=0x7f0a0016;
-        public static final int editText2=0x7f0a0018;
-        public static final int editText3=0x7f0a001b;
-        public static final int editText4=0x7f0a0024;
-        public static final int editText5=0x7f0a0025;
+        public static final int editText2=0x7f0a0017;
         public static final int follow=0x7f0a0044;
         public static final int frame_container=0x7f0a0001;
         public static final int hh_astvisit=0x7f0a0010;
+        public static final int hhage=0x7f0a0020;
+        public static final int hhcivilstatus=0x7f0a001f;
+        public static final int hhgender=0x7f0a001d;
+        public static final int hhid=0x7f0a001a;
         public static final int hhname=0x7f0a000f;
         public static final int icon=0x7f0a0003;
         public static final int imageButton=0x7f0a0011;
@@ -86,6 +86,7 @@ public final class R {
         public static final int linear_listview_lay=0x7f0a0012;
         public static final int list_slidermenu=0x7f0a0002;
         public static final int mylist=0x7f0a000d;
+        public static final int number_of_children=0x7f0a0025;
         public static final int observationLabel=0x7f0a0008;
         public static final int overview=0x7f0a0040;
         public static final int profile=0x7f0a0041;
@@ -100,10 +101,9 @@ public final class R {
         public static final int r8=0x7f0a0032;
         public static final int r9=0x7f0a0033;
         public static final int radio1=0x7f0a002e;
-        public static final int radio2=0x7f0a001d;
-        public static final int radio3=0x7f0a001f;
         public static final int relativeLayout1=0x7f0a002c;
         public static final int relativeLayout2=0x7f0a0030;
+        public static final int save=0x7f0a000b;
         public static final int spinner1=0x7f0a002d;
         public static final int survey=0x7f0a0042;
         public static final int textView=0x7f0a0007;
@@ -116,8 +116,8 @@ public final class R {
         public static final int textView15=0x7f0a003c;
         public static final int textView16=0x7f0a003d;
         public static final int textView17=0x7f0a003e;
-        public static final int textView2=0x7f0a0017;
-        public static final int textView3=0x7f0a0020;
+        public static final int textView2=0x7f0a0016;
+        public static final int textView3=0x7f0a001b;
         public static final int textView4=0x7f0a001e;
         public static final int textView5=0x7f0a001c;
         public static final int textView6=0x7f0a002a;
