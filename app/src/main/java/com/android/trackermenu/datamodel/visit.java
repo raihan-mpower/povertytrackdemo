@@ -8,15 +8,15 @@ public enum visittype {
     lastvisit,nextvisit;
 }
 
-    public visit(visittype type_of_visit, String id, String familyid, String userid) {
+    public visit( String familyid,visittype type_of_visit, String userid,String date) {
         this.type_of_visit = type_of_visit;
-        this.id = id;
         this.familyid = familyid;
         this.userid = userid;
+        this.date = date;
     }
 
     public visittype type_of_visit;
-    public String id,familyid,userid;
+    public String id,familyid,userid,date;
 
     public String getId() {
         return id;

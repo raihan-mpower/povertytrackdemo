@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 //import android.support.v4.app.Fragment;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MyFamilies extends Fragment {
@@ -64,27 +65,47 @@ public class MyFamilies extends Fragment {
         
         ListView listView = (ListView) rootView.findViewById(R.id.mylist); 
        
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.simple_list_item_1,listContent);
-      
-      
-     
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new OnItemClickListener() {
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.simple_list_item_1,listContent);
+//
+//
+        UsersAdapter uad = new UsersAdapter(rootView.getContext());
+        listView.setAdapter(uad);
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
-
-            	
-            	
-            	Intent i = new Intent(rootView.getContext(), PersonDetails.class);
-            	startActivity(i);
-
-            }
-
-        });
+        uad.notifyDataSetChanged();
         return rootView;
     }
+    public class UsersAdapter extends ArrayAdapter {
+        public UsersAdapter(Context context) {
+            super(context, R.layout.item_user);
+        }
+        @Override
+         public int getCount(){
+            return 5;
+        }
 
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            // Get the data item for this position
+
+            // Check if an existing view is being reused, otherwise inflate the view
+            if (convertView == null) {
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, null, false);
+            }
+            convertView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(),PersonDetails.class));
+                }
+            });
+            // Lookup view for data population
+//            TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
+//            TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
+//            // Populate the data into the template view using the data object
+//            tvName.setText(user.name);
+//            tvHome.setText(user.hometown);
+            // Return the completed view to render on screen
+            return convertView;
+        }
+    }
 
 }

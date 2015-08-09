@@ -23,7 +23,7 @@ public class family {
         this.lattitude = lattitude;
     }
 
-    public family(String userID, String familyID, String nameHH, String IDHH, String ageHH, String civilStatus, String genderHH, String numberOfChildren, String numberOFChildrenBetween) {
+    public family(String userID, String familyID, String nameHH, String IDHH, String ageHH, String genderHH, String civilStatus, String numberOfChildren, String numberOFChildrenBetween) {
         UserID = userID;
         FamilyID = familyID;
         NameHH = nameHH;
