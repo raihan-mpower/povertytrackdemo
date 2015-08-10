@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class RecordRepository extends SQLiteOpenHelper{
 
-    private String family_sql = "CREATE TABLE family(id INTEGER PRIMARY KEY AUTOINCREMENT, UserID VARCHAR, FamilyID INTEGER AUTOINCREMENT , " +
+    private String family_sql = "CREATE TABLE family( UserID VARCHAR, FamilyID INTEGER  PRIMARY KEY AUTOINCREMENT , " +
             "NameHH VARCHAR, IDHH VARCHAR, AgeHH VARCHAR, GenderHH VARCHAR, CivilStatus VARCHAR, NumberOfChildren VARCHAR, longitude VARCHAR, lattitude VARCHAR)";
 
     private String familyDetails_sql = "CREATE TABLE familyDetails(id INTEGER PRIMARY KEY AUTOINCREMENT, mealsPerDay VARCHAR, FamilyID VARCHAR, " +
@@ -103,9 +103,9 @@ public class RecordRepository extends SQLiteOpenHelper{
         Cursor cursor = database.query("family", null, null ,null, null, null, null, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            family Family = new family(cursor.getString(1), cursor.getString(2), cursor.getString(3),
-                    cursor.getString(4), cursor.getString(5), cursor.getString(6),
-                   cursor.getString(7),cursor.getString(8),"");
+            family Family = new family(cursor.getString(0), cursor.getString(1), cursor.getString(2),
+                    cursor.getString(3), cursor.getString(4), cursor.getString(5),
+                   cursor.getString(6),cursor.getString(7),"");
 
             families.add(Family);
             cursor.moveToNext();

@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
+            android:text="Primary Education Stipend"
             android:id="@+id/textView8"
             android:layout_gravity="center_vertical"
             android:layout_margin="10dp" />
@@ -34,8 +34,9 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Product/Service"
                 android:id="@+id/textView9"
+                android:editable="false"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
                 android:padding="5dp" />
@@ -43,7 +44,6 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
                 android:id="@+id/textView10"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -58,7 +58,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Status"
                 android:id="@+id/textView11"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -67,7 +67,6 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
                 android:id="@+id/textView12"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -82,7 +81,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Date Delivered"
                 android:id="@+id/textView13"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -91,7 +90,6 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
                 android:id="@+id/textView14"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -106,7 +104,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Unit"
                 android:id="@+id/textView15"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -115,7 +113,6 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
                 android:id="@+id/textView16"
                 android:layout_weight="1"
                 android:background="@drawable/textfieldback"
@@ -131,24 +128,152 @@
         android:layout_margin="5dp"
         android:text="Calendar deliveries" />
 
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/calendarView2"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1" />
-
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
-        <Button
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="send alert to ministry"
-            android:id="@+id/button"
-            android:layout_gravity="center_vertical" />
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="JAN" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button4"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="FEB" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button5"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="MAR" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button6"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="APR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button7"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="MAY" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button10"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="JUN" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button8"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="JUL" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button9"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="AUG" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button11"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="SEP" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button12"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="OCT" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button13"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="NOV" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button14"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="DEC" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send alert to ministry"
+        android:id="@+id/button" />
 
 </LinearLayout>

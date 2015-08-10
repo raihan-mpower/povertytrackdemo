@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <!-- view background color -->
+    <solid
+        android:color="#D5621D" >
+    </solid>
+
+    <!-- view border color and width -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/listselectbuttonback" >
+    </stroke>
+
+    <!-- The radius makes the corners rounded -->
+    <corners
+        android:radius="150dp"   >
+    </corners>
+    <size
+        android:width="30dp"
+        android:height="30dp"/>
+
+</shape><!-- From: file:/home/raihan/povertytrackdemo/app/src/main/res/drawable/allowanceforwidowed.xml -->

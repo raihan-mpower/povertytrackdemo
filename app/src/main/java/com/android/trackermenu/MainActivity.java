@@ -186,7 +186,8 @@ public class MainActivity extends Activity {
 			fragment = new Settings();
 			break;
 		case 2:
-			fragment = new Newfamilies("1");
+            Newfamilies.UserID = "1";
+			fragment = new Newfamilies();
 			break;
 		case 4:
 			fragment = new Logout();

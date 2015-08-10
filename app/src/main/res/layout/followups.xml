@@ -11,20 +11,169 @@
         android:id="@+id/button"
         android:layout_margin="5dp" />
 
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-        android:id="@+id/calendarView" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView"
-        android:layout_margin="5dp"
-        android:text="schedule next visit" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button15"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="JAN" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button16"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="FEB" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button17"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="MAR" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button18"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="APR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button19"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="MAY" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button20"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="JUN" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button21"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="JUL" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button22"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="AUG" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button23"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="SEP" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button24"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="OCT" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button25"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="NOV" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button26"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonroundback"
+                    android:layout_margin="3dp"
+                    android:text="DEC" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView"
+            android:layout_margin="5dp"
+            android:text="schedule next visit"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <DatePicker
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:spinnersShown="true"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,6 +190,22 @@
         android:ems="10"
         android:id="@+id/editText"
         android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:id="@+id/button27"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
 </LinearLayout>

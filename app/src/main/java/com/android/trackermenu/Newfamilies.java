@@ -2,6 +2,7 @@ package com.android.trackermenu;
 
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -20,10 +21,11 @@ public class Newfamilies extends Fragment {
     public EditText hhname,hhid,hhage,number_of_children,children_in_between;
 	public RadioGroup hhgender,hhcivil_status;
     public Button save;
-    String UserID;
-	public Newfamilies(String userID){
-        this.UserID = userID;
+    public static String UserID;
+    public Newfamilies(){
+
     }
+
 
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +49,8 @@ public class Newfamilies extends Fragment {
                 family Family = new family(UserID,"",hhname.getEditableText().toString(),hhid.getEditableText().toString(),hhage.getEditableText().toString(),gender,civil_status,number_of_children.getEditableText().toString(),children_in_between.getEditableText().toString());
                 RecordRepository records = new RecordRepository(getActivity());
                 records.insertTOTable("family", records.createContentValuesForfamily(Family));
+                Intent I = new Intent(getActivity(), MainActivity.class);
+                startActivity(I);
             }
         });
      

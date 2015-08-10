@@ -3,6 +3,7 @@
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
         <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:buttonStyle">@style/appButton</item>
     </style>
 
 
@@ -22,10 +23,13 @@
 
     <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/textfieldback</item>
+        <item name="android:padding">8dp</item>
     </style>
 
     <style name="appButton" parent="@android:style/Widget.Button">
         <item name="android:background">@color/themegreen</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
 
     </style>
 

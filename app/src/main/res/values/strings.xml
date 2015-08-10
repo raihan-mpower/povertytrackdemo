@@ -39,5 +39,6 @@
     <string name="video">Video</string>
  
     <string name="email">EMail</string>
+    <string name="title_activity_mapactivity">mapactivity</string>
 
 </resources>

@@ -11,17 +11,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
+import android.widget.TextView;
+
+import com.android.trackermenu.datamodel.family;
 
 public class PersonDetails  extends Activity{
 
-	
+      public static	family Family ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.show_person);
-
+        ((TextView)findViewById(R.id.name)).setText(Family.getNameHH());
+        ((TextView)findViewById(R.id.agehh)).setText(Family.getNameHH());
+        ((TextView)findViewById(R.id.children)).setText(Family.getNumberOfChildren() + " Children");
 		
 	    try {
 	        ViewConfiguration config = ViewConfiguration.get(this);

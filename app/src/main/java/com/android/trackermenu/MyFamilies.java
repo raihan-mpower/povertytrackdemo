@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 //import android.support.v4.app.Fragment;
 import android.widget.SimpleAdapter;
@@ -76,6 +77,12 @@ public class MyFamilies extends Fragment {
         listView.setAdapter(uad);
 
         uad.notifyDataSetChanged();
+        ((Button)rootView.findViewById(R.id.visitmap)).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),mapactivity.class));
+            }
+        });
         return rootView;
     }
     public class UsersAdapter extends ArrayAdapter {
@@ -91,7 +98,7 @@ public class MyFamilies extends Fragment {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             // Get the data item for this position
 
             // Check if an existing view is being reused, otherwise inflate the view
@@ -101,15 +108,16 @@ public class MyFamilies extends Fragment {
             convertView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    PersonDetails.Family = families.get(position);
                     startActivity(new Intent(getActivity(),PersonDetails.class));
                 }
             });
             // Lookup view for data population
             TextView hhname = (TextView) convertView.findViewById(R.id.hhname);
-//            TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
+            TextView visit = (TextView) convertView.findViewById(R.id.hh_astvisit);
 //            // Populate the data into the template view using the data object
             hhname.setText(families.get(position).getNameHH());
-//            tvHome.setText(user.hometown);
+            visit.setText("last visited 10/09/2015");
             // Return the completed view to render on screen
             return convertView;
         }

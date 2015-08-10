@@ -21,7 +21,9 @@
             android:layout_weight="0.50"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:textColor="#000000"
+            android:padding="8dp" />
 
         <Button
             android:id="@+id/button2"
@@ -32,30 +34,45 @@
             android:layout_weight="0.50"
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:textColor="#000"
+            android:padding="8dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_margin="3dp"
-        android:background="#ffffff">
+        android:background="#ffffff"
+        android:orientation="vertical">
 
         <ListView
             android:id="@+id/mylist"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingLeft="4dip"
             android:cacheColorHint="@android:color/transparent"
             android:clickable="true"
             android:divider="#000000"
             android:dividerHeight="2px"
             android:focusable="true"
-            android:smoothScrollbar="true" >
+            android:smoothScrollbar="true"
+            android:layout_weight="1">
 
         </ListView>
-        
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visit map"
+            android:id="@+id/visitmap"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:background="@drawable/selectedlist"
+            android:textColor="#DACA6A"
+            android:layout_margin="5dp" />
+
     </LinearLayout>
-    
+
 
 </LinearLayout>
